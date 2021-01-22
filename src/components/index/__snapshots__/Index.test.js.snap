@@ -1,0 +1,32 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Index should render initial layout 1`] = `
+Array [
+  <div
+    className="container"
+    style={
+      Object {
+        "height": "100vh",
+      }
+    }
+  >
+    <div
+      className="row h-100"
+    >
+      <div
+        className="col-sm-12 my-auto d-flex justify-content-center"
+      >
+        <ul>
+          <li>
+            <a
+              href="/repositories"
+            >
+              Repositories
+            </a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </div>,
+]
+`;
