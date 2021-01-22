@@ -1,10 +1,14 @@
-import Index from "./components/index/Index";
+import { BrowserRouter } from 'react-router-dom';
+import Main from './components/main/Main';
 
 
 function App() {
   return (
-    <Index></Index>
+    <BrowserRouter>
+      <Main></Main>
+    </BrowserRouter>
   );
 }
 
 export default App;
+ 
