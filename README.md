@@ -1,4 +1,14 @@
-# Getting Started with Create React App
+# Repositories exercise
+
+This application was built using React. It's a basic frontend SPA with two domains: INDEX and Repositories. Repositories displays a list of retrieved users in cards and Index only contains a link to Repositores.
+
+-------------------------------------------------------------------------------------
+## Versions
+
+NodeJS: 12.18.3                                                                             React: 17.0.1
+
+------------------------------------------------------------------------------------
+# Basic documentation provided by React
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
@@ -39,32 +49,22 @@ Instead, it will copy all the configuration files and the transitive dependencie
 
 You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
 
-## Learn More
+-------------------------------------------------------------------------------------------
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+## Architecture
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+An attempt to implement a layered architecture was done, with more importance on ports and adapters, because of the lack of interfaces in javascript. The layers, outside in, are:
 
-### Code Splitting
+* Infrastructure (UI rendering, network, implementation of ports. ie: UserRestRepository, any component)
+* Use Cases (i.e. UserService)
+* Entities (i.e. conceptual interface contract for UserRepository and User entity)
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+Most of these can be seen in services/Users. Two repositories were implemented. One to retrieve users right out the file and the other as a request to an API. Conceptually, these two  implement the same interface contract and any other implementation should implement a *getUser* method too.
 
-### Analyzing the Bundle Size
+-----------------------------------------------------------------------------------------------
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+## Patterns
 
-### Making a Progressive Web App
+The main pattern used in this application is container and presentational components. Clearly seen in RepositoriesContainer and RepositoriosList.
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+----------------------------------------------------------------------------------------------
