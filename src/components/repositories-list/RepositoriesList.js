@@ -20,8 +20,9 @@ class RepositoriesList extends Component {
                             <CardBody>
                             <CardTitle tag='h2'>{ user.nickName }</CardTitle>
                             <CardText>
-                                <h5>Full Name: { user.name }</h5>
-                                <h5>Github repo: <a href={ user.github_url }>{ user.github_url }</a></h5>
+                                Full Name: { user.name }
+                                <br></br>
+                                Github repo: <a href={ user.github_url }>{ user.github_url }</a>
                             </CardText>
                         </CardBody>
                             </div>

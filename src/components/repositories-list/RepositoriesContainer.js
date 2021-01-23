@@ -1,15 +1,21 @@
 import React, { Component } from 'react';
-import Data from '../../share/data.json';
+import UserFileRepository from '../../services/Users/UserFileRepository';
+import UserRestRepository from '../../services/Users/UserRestRepository';
+import UserServiceImpl from '../../services/Users/UserService';
 import RepositoriesList from './RepositoriesList';
 
 class RepositoriesContainer extends Component {
     constructor(props) {
         super(props);
         this.state = { users: [] }
+        this.userService = new UserServiceImpl(new UserRestRepository('data.json'));
     }
 
     componentDidMount() {
-        this.setState({ users: Data.users });
+        this.userService.getUsers()
+        .then((users) => {
+            this.setState({ users: users });
+        });
     }
 
     render() {
