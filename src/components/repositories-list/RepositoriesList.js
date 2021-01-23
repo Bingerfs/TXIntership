@@ -13,18 +13,18 @@ class RepositoriesList extends Component {
                 <div key='user.nickName' className="col-12 m-1">
                     <Card>
                         <div className='row'>
-                            <div className='col-3'>
-                                <CardImg src={ profileAvatar } alt={ user.nickName } />
+                            <div className='col-12 col-md-3'>
+                                <CardImg width='100%' src={ profileAvatar } alt={ user.nickName } />
                             </div>
-                            <div className='col'>
-                            <CardBody>
-                            <CardTitle tag='h2'>{ user.nickName }</CardTitle>
-                            <CardText>
-                                Full Name: { user.name }
-                                <br></br>
-                                Github repo: <a href={ user.github_url }>{ user.github_url }</a>
-                            </CardText>
-                        </CardBody>
+                            <div className='col-12 col-md-3'>
+                                <CardBody>
+                                    <CardTitle tag='h2'>{ user.nickName }</CardTitle>
+                                    <CardText>
+                                        Full Name: { user.name }
+                                        <br></br>
+                                        Github repo: <a href={ user.github_url }>{ user.github_url }</a>
+                                    </CardText>
+                                </CardBody>
                             </div>
                         </div>
                     </Card>
