@@ -1,12 +1,11 @@
 # Repositories exercise
 
-This application was built using React. It's a basic frontend SPA with two main domains: INDEX and Repositories. Repositories displays a list of retrieved users in cards and Index only contains a link to Repositores.
+This application was built using React. It's a basic frontend SPA with two domains: INDEX and Repositories. Repositories displays a list of retrieved users in cards and Index only contains a link to Repositores.
 
 -------------------------------------------------------------------------------------
 ## Versions
 
-NodeJS: 12.18.3
-React: 17.0.1
+NodeJS: 12.18.3                                                                             React: 17.0.1
 
 ------------------------------------------------------------------------------------
 # Basic documentation provided by React
@@ -54,13 +53,13 @@ You don’t have to ever use `eject`. The curated feature set is suitable for sm
 
 ## Architecture
 
-An attempt to implement a layered architecture was implemented, with more importance on ports and adapters, hence the lack on interfaces in javascript. The layers, outside in, are:
+An attempt to implement a layered architecture was done, with more importance on ports and adapters, because of the lack of interfaces in javascript. The layers, outside in, are:
 
 * Infrastructure (UI rendering, network, implementation of ports. ie: UserRestRepository, any component)
 * Use Cases (i.e. UserService)
-* Entities (i.e. conceptual contractual interface for UserRepository and User entity)
+* Entities (i.e. conceptual interface contract for UserRepository and User entity)
 
-All of this is implemented in services/Users. Two repositories were implemented. One to retrieve user straight from the file and the other as a request to an API.
+Most of these can be seen in services/Users. Two repositories were implemented. One to retrieve users right out the file and the other as a request to an API. Conceptually, these two  implement the same interface contract and any other implementation should implement a *getUser* method too.
 
 -----------------------------------------------------------------------------------------------
 

@@ -30,9 +30,9 @@ class RepositoriesContainer extends Component {
     render() {
         const contentRetrieved = this.state.hasError ? (<PageError errorMessage={ this.state.errorMessage }></PageError>) : (<RepositoriesList users={ this.state.users }></RepositoriesList>);
         return (
-            <>
+            <div className='container' style={{height: '100vh'}}>
                 { this.state.isLoading ? (<PageSpinner></PageSpinner>) : contentRetrieved }
-            </>
+            </div>
         );
     }
 }

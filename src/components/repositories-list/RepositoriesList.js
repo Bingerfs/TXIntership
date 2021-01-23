@@ -10,7 +10,7 @@ class RepositoriesList extends Component {
         const userCards = this.props.users.map((user) => {
             const profileAvatar = user.avatar_url || 'assets/images/Generic-Profile-1600x1600.png'; 
             return (
-                <div key='user.nickName' className="col-12 m-1">
+                <div key={ user.nickName } className="col-12 m-1">
                     <Card>
                         <div className='row'>
                             <div className='col-12 col-md-3'>
@@ -33,10 +33,8 @@ class RepositoriesList extends Component {
         });
         
         return (
-            <div className='container'>
-                <div className='row'>
+            <div className='row'>
                 { userCards }
-                </div>
             </div>
         );
     }
