@@ -5,7 +5,7 @@ class UserRestRepository {
 
     async getUsers() {
         try {
-            const response = await fetch('data.json', {
+            const response = await fetch(this.API_URL, {
                 headers: {
                     'Content-Type': 'application/json',
                     'Accept': 'application/json'

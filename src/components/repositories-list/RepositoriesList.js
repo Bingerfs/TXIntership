@@ -16,7 +16,7 @@ class RepositoriesList extends Component {
                             <div className='col-12 col-md-3'>
                                 <CardImg width='100%' src={ profileAvatar } alt={ user.nickName } />
                             </div>
-                            <div className='col-12 col-md-3'>
+                            <div className='col-12 col-md-9'>
                                 <CardBody>
                                     <CardTitle tag='h2'>{ user.nickName }</CardTitle>
                                     <CardText>
@@ -31,6 +31,7 @@ class RepositoriesList extends Component {
                 </div>
             );
         });
+        
         return (
             <div className='container'>
                 <div className='row'>
